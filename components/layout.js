@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import styles from './layout.module.css'
 
 export const siteTitle = 'Test Database Connection'
 
@@ -10,7 +11,7 @@ export default function Layout({ children }) {
         <title>{siteTitle}</title>
       </Head>
 
-      <div>
+      <div className={styles.container}>
         { children }
       </div>
     </>
