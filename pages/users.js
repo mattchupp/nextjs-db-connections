@@ -3,11 +3,12 @@ import { FirebaseDb} from '../lib/firebase'
 function Users ({ data }) {
   return (
     <>
-      <ul>
-        {data.map(({ first_name, last_name, username }) =>
-          <li key={username}>{username}</li>
-        )}
-      </ul>
+      {data.map(({ first_name, last_name, username }) =>
+        <div key={username}>
+          <h2>{first_name} {last_name}</h2>
+          <p>Username: {username}</p>
+        </div>
+      )}
     </>
   )
 }
